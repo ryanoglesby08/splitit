@@ -1,0 +1,1369 @@
+{
+  "labelAnnotations": [
+    {
+      "mid": "/m/07s6nbt",
+      "description": "Text",
+      "score": 90
+    },
+    {
+      "mid": "/m/04gcl9",
+      "description": "Receipt",
+      "score": 70
+    },
+    {
+      "mid": "/m/015bv3",
+      "description": "Document",
+      "score": 58
+    },
+    {
+      "mid": "/m/02py351",
+      "description": "Ticket",
+      "score": 54
+    }
+  ],
+  "textAnnotations": [
+    {
+      "locale": "en",
+      "description": "Location: DNCAUS02\nKiosk THSAUSXPEKSK02\nOrder ID: 029468\nPOS Order Id: 5793\nDate: 01/21/2013\nTime: 12:17 PM\nDine In\n1 The Original\nSourdough\n+No Tomato\n1 Naked Juice\n1 Chips\nSour Cream and Onion\nSub-Total\nSales Tax\nTOTAL\nCustomer Name: RYAN 0GLESBY\nPaid Carda: *t**********2518\nVISA\nBalance\n$4.99\n$4.99\n$1.19\n$11.17\n$0.92\n$12.09\n$12.09\n$0.00\n",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 8,
+            "y": 11
+          },
+          {
+            "x": 280,
+            "y": 11
+          },
+          {
+            "x": 280,
+            "y": 397
+          },
+          {
+            "x": 8,
+            "y": 397
+          }
+        ]
+      }
+    },
+    {
+      "description": "Location:",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 23,
+            "y": 11
+          },
+          {
+            "x": 77,
+            "y": 11
+          },
+          {
+            "x": 77,
+            "y": 24
+          },
+          {
+            "x": 23,
+            "y": 24
+          }
+        ]
+      }
+    },
+    {
+      "description": "DNCAUS02",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 84,
+            "y": 11
+          },
+          {
+            "x": 134,
+            "y": 11
+          },
+          {
+            "x": 134,
+            "y": 24
+          },
+          {
+            "x": 84,
+            "y": 24
+          }
+        ]
+      }
+    },
+    {
+      "description": "Kiosk",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 21,
+            "y": 25
+          },
+          {
+            "x": 50,
+            "y": 25
+          },
+          {
+            "x": 50,
+            "y": 40
+          },
+          {
+            "x": 21,
+            "y": 40
+          }
+        ]
+      }
+    },
+    {
+      "description": "THSAUSXPEKSK02",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 65,
+            "y": 25
+          },
+          {
+            "x": 150,
+            "y": 25
+          },
+          {
+            "x": 150,
+            "y": 40
+          },
+          {
+            "x": 65,
+            "y": 40
+          }
+        ]
+      }
+    },
+    {
+      "description": "Order",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 23,
+            "y": 40
+          },
+          {
+            "x": 53,
+            "y": 40
+          },
+          {
+            "x": 53,
+            "y": 52
+          },
+          {
+            "x": 23,
+            "y": 52
+          }
+        ]
+      }
+    },
+    {
+      "description": "ID:",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 60,
+            "y": 40
+          },
+          {
+            "x": 78,
+            "y": 40
+          },
+          {
+            "x": 78,
+            "y": 52
+          },
+          {
+            "x": 60,
+            "y": 52
+          }
+        ]
+      }
+    },
+    {
+      "description": "029468",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 84,
+            "y": 40
+          },
+          {
+            "x": 121,
+            "y": 40
+          },
+          {
+            "x": 121,
+            "y": 52
+          },
+          {
+            "x": 84,
+            "y": 52
+          }
+        ]
+      }
+    },
+    {
+      "description": "POS",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 22,
+            "y": 54
+          },
+          {
+            "x": 42,
+            "y": 54
+          },
+          {
+            "x": 42,
+            "y": 69
+          },
+          {
+            "x": 22,
+            "y": 69
+          }
+        ]
+      }
+    },
+    {
+      "description": "Order",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 47,
+            "y": 53
+          },
+          {
+            "x": 77,
+            "y": 52
+          },
+          {
+            "x": 77,
+            "y": 67
+          },
+          {
+            "x": 47,
+            "y": 68
+          }
+        ]
+      }
+    },
+    {
+      "description": "Id:",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 83,
+            "y": 53
+          },
+          {
+            "x": 101,
+            "y": 53
+          },
+          {
+            "x": 101,
+            "y": 68
+          },
+          {
+            "x": 83,
+            "y": 68
+          }
+        ]
+      }
+    },
+    {
+      "description": "5793",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 107,
+            "y": 52
+          },
+          {
+            "x": 133,
+            "y": 52
+          },
+          {
+            "x": 133,
+            "y": 67
+          },
+          {
+            "x": 107,
+            "y": 67
+          }
+        ]
+      }
+    },
+    {
+      "description": "Date:",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 22,
+            "y": 68
+          },
+          {
+            "x": 53,
+            "y": 67
+          },
+          {
+            "x": 53,
+            "y": 82
+          },
+          {
+            "x": 22,
+            "y": 83
+          }
+        ]
+      }
+    },
+    {
+      "description": "01/21/2013",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 58,
+            "y": 67
+          },
+          {
+            "x": 120,
+            "y": 66
+          },
+          {
+            "x": 120,
+            "y": 81
+          },
+          {
+            "x": 58,
+            "y": 82
+          }
+        ]
+      }
+    },
+    {
+      "description": "Time:",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 22,
+            "y": 83
+          },
+          {
+            "x": 53,
+            "y": 83
+          },
+          {
+            "x": 53,
+            "y": 96
+          },
+          {
+            "x": 22,
+            "y": 96
+          }
+        ]
+      }
+    },
+    {
+      "description": "12:17",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 59,
+            "y": 83
+          },
+          {
+            "x": 90,
+            "y": 83
+          },
+          {
+            "x": 90,
+            "y": 96
+          },
+          {
+            "x": 59,
+            "y": 96
+          }
+        ]
+      }
+    },
+    {
+      "description": "PM",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 96,
+            "y": 83
+          },
+          {
+            "x": 105,
+            "y": 83
+          },
+          {
+            "x": 105,
+            "y": 96
+          },
+          {
+            "x": 96,
+            "y": 96
+          }
+        ]
+      }
+    },
+    {
+      "description": "Dine",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 130,
+            "y": 96
+          },
+          {
+            "x": 155,
+            "y": 96
+          },
+          {
+            "x": 155,
+            "y": 111
+          },
+          {
+            "x": 130,
+            "y": 111
+          }
+        ]
+      }
+    },
+    {
+      "description": "In",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 161,
+            "y": 95
+          },
+          {
+            "x": 174,
+            "y": 95
+          },
+          {
+            "x": 174,
+            "y": 110
+          },
+          {
+            "x": 161,
+            "y": 110
+          }
+        ]
+      }
+    },
+    {
+      "description": "1",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 21,
+            "y": 142
+          },
+          {
+            "x": 27,
+            "y": 142
+          },
+          {
+            "x": 27,
+            "y": 156
+          },
+          {
+            "x": 21,
+            "y": 156
+          }
+        ]
+      }
+    },
+    {
+      "description": "The",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 34,
+            "y": 142
+          },
+          {
+            "x": 52,
+            "y": 142
+          },
+          {
+            "x": 52,
+            "y": 156
+          },
+          {
+            "x": 34,
+            "y": 156
+          }
+        ]
+      }
+    },
+    {
+      "description": "Original",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 59,
+            "y": 142
+          },
+          {
+            "x": 108,
+            "y": 142
+          },
+          {
+            "x": 108,
+            "y": 156
+          },
+          {
+            "x": 59,
+            "y": 156
+          }
+        ]
+      }
+    },
+    {
+      "description": "Sourdough",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 26,
+            "y": 156
+          },
+          {
+            "x": 83,
+            "y": 156
+          },
+          {
+            "x": 83,
+            "y": 169
+          },
+          {
+            "x": 26,
+            "y": 169
+          }
+        ]
+      }
+    },
+    {
+      "description": "+No",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 19,
+            "y": 170
+          },
+          {
+            "x": 38,
+            "y": 171
+          },
+          {
+            "x": 37,
+            "y": 184
+          },
+          {
+            "x": 18,
+            "y": 183
+          }
+        ]
+      }
+    },
+    {
+      "description": "Tomato",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 45,
+            "y": 171
+          },
+          {
+            "x": 84,
+            "y": 173
+          },
+          {
+            "x": 83,
+            "y": 186
+          },
+          {
+            "x": 44,
+            "y": 184
+          }
+        ]
+      }
+    },
+    {
+      "description": "1",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 18,
+            "y": 197
+          },
+          {
+            "x": 24,
+            "y": 197
+          },
+          {
+            "x": 23,
+            "y": 211
+          },
+          {
+            "x": 17,
+            "y": 211
+          }
+        ]
+      }
+    },
+    {
+      "description": "Naked",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 30,
+            "y": 197
+          },
+          {
+            "x": 62,
+            "y": 198
+          },
+          {
+            "x": 61,
+            "y": 212
+          },
+          {
+            "x": 29,
+            "y": 211
+          }
+        ]
+      }
+    },
+    {
+      "description": "Juice",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 69,
+            "y": 198
+          },
+          {
+            "x": 98,
+            "y": 199
+          },
+          {
+            "x": 97,
+            "y": 213
+          },
+          {
+            "x": 68,
+            "y": 212
+          }
+        ]
+      }
+    },
+    {
+      "description": "1",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 15,
+            "y": 225
+          },
+          {
+            "x": 21,
+            "y": 225
+          },
+          {
+            "x": 20,
+            "y": 237
+          },
+          {
+            "x": 14,
+            "y": 237
+          }
+        ]
+      }
+    },
+    {
+      "description": "Chips",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 27,
+            "y": 225
+          },
+          {
+            "x": 60,
+            "y": 226
+          },
+          {
+            "x": 59,
+            "y": 238
+          },
+          {
+            "x": 26,
+            "y": 237
+          }
+        ]
+      }
+    },
+    {
+      "description": "Sour",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 19,
+            "y": 240
+          },
+          {
+            "x": 45,
+            "y": 241
+          },
+          {
+            "x": 45,
+            "y": 252
+          },
+          {
+            "x": 19,
+            "y": 251
+          }
+        ]
+      }
+    },
+    {
+      "description": "Cream",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 52,
+            "y": 241
+          },
+          {
+            "x": 84,
+            "y": 242
+          },
+          {
+            "x": 84,
+            "y": 253
+          },
+          {
+            "x": 52,
+            "y": 252
+          }
+        ]
+      }
+    },
+    {
+      "description": "and",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 92,
+            "y": 242
+          },
+          {
+            "x": 111,
+            "y": 242
+          },
+          {
+            "x": 111,
+            "y": 253
+          },
+          {
+            "x": 92,
+            "y": 253
+          }
+        ]
+      }
+    },
+    {
+      "description": "Onion",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 117,
+            "y": 243
+          },
+          {
+            "x": 149,
+            "y": 244
+          },
+          {
+            "x": 149,
+            "y": 255
+          },
+          {
+            "x": 117,
+            "y": 254
+          }
+        ]
+      }
+    },
+    {
+      "description": "Sub-Total",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 14,
+            "y": 269
+          },
+          {
+            "x": 73,
+            "y": 269
+          },
+          {
+            "x": 73,
+            "y": 282
+          },
+          {
+            "x": 14,
+            "y": 282
+          }
+        ]
+      }
+    },
+    {
+      "description": "Sales",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 14,
+            "y": 282
+          },
+          {
+            "x": 46,
+            "y": 283
+          },
+          {
+            "x": 45,
+            "y": 297
+          },
+          {
+            "x": 13,
+            "y": 296
+          }
+        ]
+      }
+    },
+    {
+      "description": "Tax",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 53,
+            "y": 283
+          },
+          {
+            "x": 73,
+            "y": 284
+          },
+          {
+            "x": 72,
+            "y": 298
+          },
+          {
+            "x": 52,
+            "y": 297
+          }
+        ]
+      }
+    },
+    {
+      "description": "TOTAL",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 13,
+            "y": 298
+          },
+          {
+            "x": 46,
+            "y": 299
+          },
+          {
+            "x": 45,
+            "y": 312
+          },
+          {
+            "x": 12,
+            "y": 311
+          }
+        ]
+      }
+    },
+    {
+      "description": "Customer",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 13,
+            "y": 313
+          },
+          {
+            "x": 64,
+            "y": 314
+          },
+          {
+            "x": 64,
+            "y": 329
+          },
+          {
+            "x": 13,
+            "y": 328
+          }
+        ]
+      }
+    },
+    {
+      "description": "Name:",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 71,
+            "y": 315
+          },
+          {
+            "x": 101,
+            "y": 316
+          },
+          {
+            "x": 101,
+            "y": 331
+          },
+          {
+            "x": 71,
+            "y": 330
+          }
+        ]
+      }
+    },
+    {
+      "description": "RYAN",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 108,
+            "y": 316
+          },
+          {
+            "x": 134,
+            "y": 317
+          },
+          {
+            "x": 134,
+            "y": 332
+          },
+          {
+            "x": 108,
+            "y": 331
+          }
+        ]
+      }
+    },
+    {
+      "description": "0GLESBY",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 140,
+            "y": 317
+          },
+          {
+            "x": 184,
+            "y": 318
+          },
+          {
+            "x": 184,
+            "y": 333
+          },
+          {
+            "x": 140,
+            "y": 332
+          }
+        ]
+      }
+    },
+    {
+      "description": "Paid",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 12,
+            "y": 328
+          },
+          {
+            "x": 38,
+            "y": 329
+          },
+          {
+            "x": 38,
+            "y": 345
+          },
+          {
+            "x": 12,
+            "y": 344
+          }
+        ]
+      }
+    },
+    {
+      "description": "Carda:",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 57,
+            "y": 330
+          },
+          {
+            "x": 95,
+            "y": 331
+          },
+          {
+            "x": 95,
+            "y": 347
+          },
+          {
+            "x": 57,
+            "y": 346
+          }
+        ]
+      }
+    },
+    {
+      "description": "*t**********2518",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 102,
+            "y": 331
+          },
+          {
+            "x": 203,
+            "y": 334
+          },
+          {
+            "x": 202,
+            "y": 350
+          },
+          {
+            "x": 102,
+            "y": 347
+          }
+        ]
+      }
+    },
+    {
+      "description": "VISA",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 11,
+            "y": 345
+          },
+          {
+            "x": 38,
+            "y": 346
+          },
+          {
+            "x": 37,
+            "y": 360
+          },
+          {
+            "x": 10,
+            "y": 359
+          }
+        ]
+      }
+    },
+    {
+      "description": "Balance",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 9,
+            "y": 375
+          },
+          {
+            "x": 53,
+            "y": 377
+          },
+          {
+            "x": 52,
+            "y": 391
+          },
+          {
+            "x": 8,
+            "y": 389
+          }
+        ]
+      }
+    },
+    {
+      "description": "$4.99",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 246,
+            "y": 139
+          },
+          {
+            "x": 279,
+            "y": 136
+          },
+          {
+            "x": 280,
+            "y": 150
+          },
+          {
+            "x": 247,
+            "y": 153
+          }
+        ]
+      }
+    },
+    {
+      "description": "$4.99",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 247,
+            "y": 199
+          },
+          {
+            "x": 279,
+            "y": 196
+          },
+          {
+            "x": 280,
+            "y": 210
+          },
+          {
+            "x": 248,
+            "y": 213
+          }
+        ]
+      }
+    },
+    {
+      "description": "$1.19",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 247,
+            "y": 230
+          },
+          {
+            "x": 279,
+            "y": 227
+          },
+          {
+            "x": 280,
+            "y": 241
+          },
+          {
+            "x": 248,
+            "y": 244
+          }
+        ]
+      }
+    },
+    {
+      "description": "$11.17",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 241,
+            "y": 275
+          },
+          {
+            "x": 277,
+            "y": 273
+          },
+          {
+            "x": 278,
+            "y": 287
+          },
+          {
+            "x": 242,
+            "y": 289
+          }
+        ]
+      }
+    },
+    {
+      "description": "$0.92",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 247,
+            "y": 290
+          },
+          {
+            "x": 276,
+            "y": 290
+          },
+          {
+            "x": 276,
+            "y": 303
+          },
+          {
+            "x": 247,
+            "y": 303
+          }
+        ]
+      }
+    },
+    {
+      "description": "$12.09",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 239,
+            "y": 305
+          },
+          {
+            "x": 275,
+            "y": 303
+          },
+          {
+            "x": 276,
+            "y": 317
+          },
+          {
+            "x": 240,
+            "y": 319
+          }
+        ]
+      }
+    },
+    {
+      "description": "$12.09",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 237,
+            "y": 366
+          },
+          {
+            "x": 274,
+            "y": 366
+          },
+          {
+            "x": 274,
+            "y": 380
+          },
+          {
+            "x": 237,
+            "y": 380
+          }
+        ]
+      }
+    },
+    {
+      "description": "$0.00",
+      "boundingPoly": {
+        "vertices": [
+          {
+            "x": 241,
+            "y": 382
+          },
+          {
+            "x": 270,
+            "y": 381
+          },
+          {
+            "x": 271,
+            "y": 396
+          },
+          {
+            "x": 242,
+            "y": 397
+          }
+        ]
+      }
+    }
+  ],
+  "safeSearchAnnotation": {
+    "adult": "VERY_UNLIKELY",
+    "spoof": "VERY_UNLIKELY",
+    "medical": "UNLIKELY",
+    "violence": "VERY_UNLIKELY"
+  },
+  "imagePropertiesAnnotation": {
+    "dominantColors": {
+      "colors": [
+        {
+          "color": {
+            "red": 185,
+            "green": 184,
+            "blue": 185
+          },
+          "score": 0.67588621,
+          "pixelFraction": 0.67515051,
+          "percent": 67.58861965890661,
+          "percentRounded": 68,
+          "rgb": "185, 184, 185",
+          "hex": "B9B8B9"
+        },
+        {
+          "color": {
+            "red": 162,
+            "green": 161,
+            "blue": 161
+          },
+          "score": 0.27704054,
+          "pixelFraction": 0.27759534,
+          "percent": 27.70405345029617,
+          "percentRounded": 28,
+          "rgb": "162, 161, 161",
+          "hex": "A2A1A1"
+        },
+        {
+          "color": {
+            "red": 127,
+            "green": 125,
+            "blue": 126
+          },
+          "score": 0.0448935,
+          "pixelFraction": 0.04506477,
+          "percent": 4.489349910922319,
+          "percentRounded": 4,
+          "rgb": "127, 125, 126",
+          "hex": "7F7D7E"
+        },
+        {
+          "color": {
+            "red": 95,
+            "green": 94,
+            "blue": 95
+          },
+          "score": 0.0020889461,
+          "pixelFraction": 0.0020981573,
+          "percent": 0.2088946058551132,
+          "percentRounded": 0,
+          "rgb": "95, 94, 95",
+          "hex": "5F5E5F"
+        },
+        {
+          "color": {
+            "red": 217,
+            "green": 217,
+            "blue": 217
+          },
+          "score": 0.000090823742,
+          "pixelFraction": 0.000091224232,
+          "percent": 0.009082374019787535,
+          "percentRounded": 0,
+          "rgb": "217, 217, 217",
+          "hex": "D9D9D9"
+        }
+      ]
+    }
+  }
+}

@@ -12,3 +12,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+// console.log(JSON.parse(window.cloudVisionResponse));
