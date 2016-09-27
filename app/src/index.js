@@ -3,12 +3,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import App from './app';
+
 require('../stylesheet/application.scss');
 
 ReactDOM.render(
-  <div>
-    Hello world!
-  </div>,
+  <App />,
   document.getElementById('root')
 );
 
