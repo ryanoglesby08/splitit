@@ -38,6 +38,7 @@
     "webpack-node-externals": "^1.4.3"
   },
   "dependencies": {
+    "createjs-easeljs": "^0.8.2",
     "react": "^15.3.2",
     "react-addons-update": "^15.3.2",
     "react-dom": "^15.3.2",

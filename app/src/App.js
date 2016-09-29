@@ -1,5 +1,11 @@
-import React from 'react'
+import React from "react"
 
-const App = () => <div>Hello World</div>;
+import ReceiptContainer from "./receipt/ReceiptContainer";
+
+const App = () => (
+  <div>
+    <ReceiptContainer />
+  </div>
+);
 
 export default App;
