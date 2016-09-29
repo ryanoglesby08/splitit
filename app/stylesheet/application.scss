@@ -11,6 +11,8 @@ $receipt-z: 10;
 $receipt-elements-z: 11;
 $assign-to-z: 20;
 
+@import "components";
+
 .receipt {
   position: absolute;
   top: 0;
@@ -22,17 +24,4 @@ $assign-to-z: 20;
   top: 0;
   left: 0;
   z-index: $receipt-elements-z;
-}
-
-.assign-to-amount {
-  display: inline-block;
-  position: relative;
-
-  z-index: $assign-to-z;
-
-  padding: $spacing;
-
-  background-color: blue;
-  color: white;
-  border-radius: 15px
 }

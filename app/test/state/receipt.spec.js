@@ -2,7 +2,7 @@ import {expect} from 'chai';
 
 import {createStore} from 'redux';
 
-import {anOcrResponse} from '../support/receiptMothers';
+import {anOcrResponse, someVertices} from '../support/receiptMothers';
 
 import {receiveOcrResponse} from '../../src/receipt/receiptActions';
 import receiptReducer from '../../src/receipt/receiptReducer';
@@ -15,10 +15,13 @@ describe('Receipt state', () => {
   });
 
   it('has the coordinates of all money elements', () => {
+    const vertices1 = someVertices();
+    const vertices2 = someVertices();
     const ocrResponse = anOcrResponse(
       [
-        {description: 'words', vertices: [{x: 0, y: 0}, {x: 0, y: 100}, {x: 50, y: 0}, {x: 50, y: 100}]},
-        {description: '$1.00', vertices: [{x: 100, y: 100}, {x: 100, y: 200}, {x: 150, y: 100}, {x: 150, y: 200}]}
+        {description: 'words', vertices: someVertices()},
+        {description: '$1.00', vertices: vertices1},
+        {description: '$2.00', vertices: vertices2}
       ]
     );
 
@@ -27,8 +30,14 @@ describe('Receipt state', () => {
     expect(store.getState()).to.eql({
       moneyElements: [
         {
+          id: 1,
           text: '$1.00',
-          polygon: [{x: 100, y: 100}, {x: 100, y: 200}, {x: 150, y: 100}, {x: 150, y: 200}]
+          polygon: vertices1
+        },
+        {
+          id: 2,
+          text: '$2.00',
+          polygon: vertices2
         }
       ]
     });

@@ -2,9 +2,9 @@ export const types = {
   WANT_TO_ASSIGN: "WANT_TO_ASSIGN"
 };
 
-export const wantToAssign = (amount) => (
+export const wantToAssign = (moneyElement) => (
   {
     type: types.WANT_TO_ASSIGN,
-    payload: amount
+    payload: {id: moneyElement.id, text: moneyElement.text}
   }
 );

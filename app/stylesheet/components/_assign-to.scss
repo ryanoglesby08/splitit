@@ -1,0 +1,15 @@
+.assign-to {
+  display: inline-block;
+  position: relative;
+
+  z-index: $assign-to-z;
+
+  .amount {
+    padding: $spacing;
+
+    background-color: blue;
+    color: white;
+    border-radius: 15px
+  }
+}
+

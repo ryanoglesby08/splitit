@@ -4,30 +4,40 @@ import createjs from "createjs";
 
 class Receipt extends React.Component {
   componentDidMount() {
+    this.stage = new createjs.Stage("receiptCanvas");
+
+    this.drawMoneyElements()
+  }
+
+  componentDidUpdate() {
+    this.stage.removeAllChildren();
+
+    this.drawMoneyElements();
+  }
+
+  drawMoneyElements() {
     const {receipt, wantToAssign} = this.props;
 
-    const stage = new createjs.Stage("receiptCanvas");
-
-    const polygons = receipt.moneyElements.map(({text, polygon}) => {
+    const polygons = receipt.moneyElements.map((moneyElement) => {
       const graphics = new createjs.Graphics()
         .beginStroke("green")
         .beginFill("rgba(255, 255, 255, 0.01)")
-        .moveTo(polygon[0].x, polygon[0].y)
-        .lineTo(polygon[1].x, polygon[1].y)
-        .lineTo(polygon[2].x, polygon[2].y)
-        .lineTo(polygon[3].x, polygon[3].y)
+        .moveTo(moneyElement.polygon[0].x, moneyElement.polygon[0].y)
+        .lineTo(moneyElement.polygon[1].x, moneyElement.polygon[1].y)
+        .lineTo(moneyElement.polygon[2].x, moneyElement.polygon[2].y)
+        .lineTo(moneyElement.polygon[3].x, moneyElement.polygon[3].y)
         .closePath();
 
       const shape = new createjs.Shape(graphics);
       shape.on("click", () => {
-        wantToAssign(text);
+        wantToAssign(moneyElement);
       });
 
       return shape;
     });
 
-    stage.addChild(...polygons);
-    stage.update();
+    this.stage.addChild(...polygons);
+    this.stage.update();
   }
 
   render() {

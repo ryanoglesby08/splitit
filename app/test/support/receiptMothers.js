@@ -7,9 +7,14 @@ const anOcrTextAnnotation = ({description, vertices}) => (
   }
 );
 
+const rand = (max = 100) => Math.floor(Math.random() * max);
+export const someVertices = () => (
+  [{x: rand(), y: rand()}, {x: rand(), y: rand()}, {x: rand(), y: rand()}, {x: rand(), y: rand()}]
+);
+
 const defaultTextAnnotation = {
   description: "some text",
-  vertices: [{x: 23, y: 11}, {x: 77, y: 11}, {x: 77, y: 24}, {x: 23, y: 24}]
+  vertices: someVertices()
 };
 
 export const anOcrResponse = (textAnnotations = [defaultTextAnnotation]) => (
@@ -17,3 +22,13 @@ export const anOcrResponse = (textAnnotations = [defaultTextAnnotation]) => (
     textAnnotations: textAnnotations.map((annotation) => anOcrTextAnnotation(annotation))
   }
 );
+
+export const aMoneyElement = (overrides = {}) => {
+  const values = {
+    id: 1,
+    text: "$2.00",
+    polygon: someVertices()
+  };
+
+  return {...values, ...overrides};
+};

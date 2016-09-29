@@ -1,16 +1,25 @@
 import React from "react";
 
-const AssignTo = ({queue}) => {
-  if( typeof queue === "undefined" ) {
-    return null;
-  }
+class AssignTo extends React.Component {
+  render() {
+    const {queue, addToBill} = this.props;
 
-  return (
-    <div className="assign-to-amount">{queue}</div>
-  );
-};
+    if( queue == null ) {
+      return null;
+    }
+
+    return (
+      <div className="assign-to">
+        <div className="amount">{queue.text}</div>
+        <input type="text" ref="person" className="person" />
+        <input type="submit" value="OK" onClick={() => addToBill(this.refs.person.value, queue) } />
+      </div>
+    );
+  }
+}
 AssignTo.propTypes = {
-  queue: React.PropTypes.string
+  queue: React.PropTypes.object,
+  addToBill: React.PropTypes.func.isRequired
 };
 
 export default AssignTo;
