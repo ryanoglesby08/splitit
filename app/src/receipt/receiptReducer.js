@@ -27,7 +27,7 @@ reducers[receiptActions.RECEIVE_OCR_RESPONSE] = (state, payload) => {
 reducers[billActions.ADD_TO_BILL] = (state, payload) => (
   {
     ...state,
-    moneyElements: state.moneyElements.filter((element) => element.id !== payload.moneyElement.id)
+    moneyElements: state.moneyElements.filter((element) => element.id !== payload.moneyElementId)
   }
 );
 

@@ -4,6 +4,7 @@ import {types as billActions} from "../bill/billActions";
 import createReducer from "../createReducer";
 
 export const assignToQueue = (state) => state.assignTo.queue;
+export const isQueueEmpty = (state) => assignToQueue(state) == null;
 
 const initialState = {
   queue: null
