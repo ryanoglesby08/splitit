@@ -1,7 +1,38 @@
 @import 'reset';
 
+* {
+  box-sizing: border-box;
+}
+
+$spacing: 1rem;
+
+// z-indexes
+$receipt-z: 10;
+$receipt-elements-z: 11;
+$assign-to-z: 20;
+
+.receipt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $receipt-z;
+}
 .receipt-elements {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: $receipt-elements-z;
+}
+
+.assign-to-amount {
+  display: inline-block;
+  position: relative;
+
+  z-index: $assign-to-z;
+
+  padding: $spacing;
+
+  background-color: blue;
+  color: white;
+  border-radius: 15px
 }

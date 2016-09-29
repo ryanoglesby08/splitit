@@ -1,6 +1,6 @@
 import {types as receiptActions} from "./receiptActions";
 
-const defaultReducer = (state) => state;
+import createReducer from "../createReducer";
 
 const reducers = {};
 
@@ -21,9 +21,4 @@ reducers[receiptActions.RECEIVE_OCR_RESPONSE] = (state, payload) => {
   }
 };
 
-
-export default (state = {}, action = {}) => {
-  const reducer = reducers[action.type] || defaultReducer;
-
-  return reducer(state, action.payload);
-};
+export default createReducer(reducers);

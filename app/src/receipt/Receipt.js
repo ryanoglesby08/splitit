@@ -4,9 +4,11 @@ import React from "react";
 
 class Receipt extends React.Component {
   componentDidMount() {
+    const {receipt, wantToAssign} = this.props;
+
     const stage = new createjs.Stage("receiptCanvas");
 
-    const polygons = this.props.receipt.moneyElements.map(({text, polygon}) => {
+    const polygons = receipt.moneyElements.map(({text, polygon}) => {
       const graphics = new createjs.Graphics()
         .beginStroke("green")
         .beginFill("green")
@@ -18,7 +20,7 @@ class Receipt extends React.Component {
 
       const shape = new createjs.Shape(graphics);
       shape.on("click", () => {
-        console.log(`You clicked on ${text}`);
+        wantToAssign(text);
       });
 
       return shape;
@@ -31,14 +33,15 @@ class Receipt extends React.Component {
   render() {
     return (
       <div>
-        <img src="images/receipt.jpg"/>
+        <img className="receipt" src="images/receipt.jpg"/>
         <canvas className="receipt-elements" id="receiptCanvas" width={294} height={424} />
       </div>
     );
   }
 }
 Receipt.propTypes = {
-  receipt: React.PropTypes.object.isRequired
+  receipt: React.PropTypes.object.isRequired,
+  wantToAssign: React.PropTypes.func.isRequired
 };
 
 export default Receipt;

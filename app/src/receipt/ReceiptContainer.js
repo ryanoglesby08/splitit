@@ -1,5 +1,7 @@
 import {connect} from "react-redux";
 
+import {wantToAssign} from "../assignto/assignToActions";
+
 import Receipt from "./Receipt";
 
 const mapStateToProps = (state) => (
@@ -7,6 +9,7 @@ const mapStateToProps = (state) => (
     receipt: state.receipt
   }
 );
-const ReceiptContainer = connect(mapStateToProps)(Receipt);
+const actions = {wantToAssign};
+const ReceiptContainer = connect(mapStateToProps, actions)(Receipt);
 
 export default ReceiptContainer;
