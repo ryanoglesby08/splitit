@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {assignToQueue, isQueueEmpty} from "./assignToReducer";
 import {addToBill} from "../bill/billActions";
 
-import AssignTo from "./AssignTo";
+import {MaybeAssignTo} from "./AssignTo";
 
 const mapStateToProps = (state) => {
   const moneyElementInQueue = assignToQueue(state) || {};
@@ -15,4 +15,4 @@ const mapStateToProps = (state) => {
   };
 };
 const actions = {addToBill};
-export default connect(mapStateToProps, actions)(AssignTo);
+export default connect(mapStateToProps, actions)(MaybeAssignTo);

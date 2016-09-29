@@ -1,11 +1,19 @@
 import React from "react";
 
+export const MaybeAssignTo = ({isQueueEmpty, ...props}) => {
+  if (isQueueEmpty) {
+    return null;
+  }
+
+  return <AssignTo {...props} />
+};
+MaybeAssignTo.propTypes = {
+  isQueueEmpty: React.PropTypes.bool.isRequired
+};
+
+
 class AssignTo extends React.Component {
   render() {
-    if (this.props.isQueueEmpty) {
-      return null;
-    }
-
     const {moneyElementId, amount, addToBill} = this.props;
 
     return (
@@ -18,7 +26,6 @@ class AssignTo extends React.Component {
   }
 }
 AssignTo.propTypes = {
-  isQueueEmpty: React.PropTypes.bool.isRequired,
   moneyElementId: React.PropTypes.number,
   amount: React.PropTypes.string,
 
