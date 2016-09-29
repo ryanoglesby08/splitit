@@ -11,7 +11,7 @@ class Receipt extends React.Component {
     const polygons = receipt.moneyElements.map(({text, polygon}) => {
       const graphics = new createjs.Graphics()
         .beginStroke("green")
-        .beginFill("green")
+        .beginFill("rgba(255, 255, 255, 0.01)")
         .moveTo(polygon[0].x, polygon[0].y)
         .lineTo(polygon[1].x, polygon[1].y)
         .lineTo(polygon[2].x, polygon[2].y)
