@@ -1,6 +1,6 @@
-/* global createjs */
-
 import React from "react";
+
+import createjs from "createjs";
 
 class Receipt extends React.Component {
   componentDidMount() {
