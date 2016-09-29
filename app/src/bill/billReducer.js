@@ -6,7 +6,7 @@ const reducers = {};
 reducers[billActions.ADD_TO_BILL] = (state, payload) => (
   {
     ...state,
-    [payload.name]: payload.moneyElement.text
+    [payload.name]: payload.moneyElement.amount
   }
 );
 

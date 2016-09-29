@@ -30,7 +30,7 @@ describe("Assign To Component", () => {
   });
 
   it("Shows itself when there is something to assign", () => {
-    const moneyElement = aMoneyElement({text: "$2.25"});
+    const moneyElement = aMoneyElement({amount: "$2.25"});
     store.dispatch(wantToAssign(moneyElement));
 
     const assignTo = mount(<AssignToContainer store={store} />);
@@ -39,7 +39,7 @@ describe("Assign To Component", () => {
   });
 
   it.skip("Assigns an amount to someone", () => {
-    const moneyElement = aMoneyElement({text: "$5.50"});
+    const moneyElement = aMoneyElement({amount: "$5.50"});
     store.dispatch(wantToAssign(moneyElement));
 
     const assignTo = mount(<AssignToContainer store={store} />);

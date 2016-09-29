@@ -10,7 +10,7 @@ class AssignTo extends React.Component {
 
     return (
       <div className="assign-to">
-        <div className="amount">{queue.text}</div>
+        <div className="amount">{queue.amount}</div>
         <input type="text" ref="person" className="person" />
         <input type="submit" value="OK" onClick={() => addToBill(this.refs.person.value, queue) } />
       </div>

@@ -31,12 +31,12 @@ describe('Receipt state', () => {
       moneyElements: [
         {
           id: 1,
-          text: '$1.00',
+          amount: '$1.00',
           polygon: vertices1
         },
         {
           id: 2,
-          text: '$2.00',
+          amount: '$2.00',
           polygon: vertices2
         }
       ]

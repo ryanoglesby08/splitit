@@ -26,7 +26,7 @@ export const anOcrResponse = (textAnnotations = [defaultTextAnnotation]) => (
 export const aMoneyElement = (overrides = {}) => {
   const values = {
     id: 1,
-    text: "$2.00",
+    amount: "$2.00",
     polygon: someVertices()
   };
 

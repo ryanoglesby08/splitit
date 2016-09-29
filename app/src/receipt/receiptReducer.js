@@ -13,7 +13,7 @@ reducers[receiptActions.RECEIVE_OCR_RESPONSE] = (state, payload) => {
       .map((annotation) => (
         {
           id: nextId++,
-          text: annotation.description,
+          amount: annotation.description,
           polygon: annotation.boundingPoly.vertices
         }
       ));
