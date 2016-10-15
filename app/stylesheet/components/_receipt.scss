@@ -1,0 +1,12 @@
+.receipt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $receipt-z;
+}
+.receipt-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $receipt-elements-z;
+}

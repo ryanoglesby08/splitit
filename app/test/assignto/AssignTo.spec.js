@@ -13,7 +13,6 @@ import Reducers from "../../src/reducers";
 
 import AssignToContainer from "../../src/assignto/AssignToContainer";
 
-
 describe("Assign To Component", () => {
   chai.use(chaiEnzyme());
 

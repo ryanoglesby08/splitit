@@ -10,18 +10,11 @@ $spacing: 1rem;
 $receipt-z: 10;
 $receipt-elements-z: 11;
 $assign-to-z: 20;
+$done-link-z: 20;
 
 @import "components";
 
-.receipt {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: $receipt-z;
-}
-.receipt-elements {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: $receipt-elements-z;
+.done-link {
+  position: relative;
+  z-index: $done-link-z;
 }
