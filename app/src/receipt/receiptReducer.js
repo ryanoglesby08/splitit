@@ -5,6 +5,10 @@ import createReducer from "../createReducer";
 
 let nextId = 1;
 
+const initialState = {
+  moneyElements: []
+};
+
 const reducers = {};
 reducers[receiptActions.RECEIVE_OCR_RESPONSE] = (state, payload) => {
   const moneyElements =
@@ -33,4 +37,4 @@ reducers[billActions.ADD_TO_BILL] = (state, payload) => (
 
 // TODO: Switch to using update(...) here.
 
-export default createReducer(reducers);
+export default createReducer(reducers, initialState);

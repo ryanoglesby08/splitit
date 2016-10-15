@@ -9,7 +9,7 @@ import "../support/jsdom";
 import {aMoneyElement} from "../support/receiptMothers"
 
 import {wantToAssign} from "../../src/assignto/assignToActions";
-import Reducers from "../../src/reducers";
+import reducers from "../../src/reducers";
 
 import AssignToContainer from "../../src/assignto/AssignToContainer";
 
@@ -19,7 +19,7 @@ describe("Assign To Component", () => {
   let store;
 
   beforeEach(() => {
-    store = createStore(Reducers);
+    store = createStore(reducers);
   });
 
   it("Hides itself when there is nothing to assign", () => {

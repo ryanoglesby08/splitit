@@ -7,7 +7,8 @@ import {createStore, combineReducers} from "redux";
 import "../support/jsdom";
 
 import {addToBill} from "../../src/bill/billActions";
-import billReducer from "../../src/bill/billReducer";
+// import billReducer from "../../src/bill/billReducer";
+import reducers from "../../src/reducers";
 
 import BillContainer from "../../src/bill/BillContainer";
 
@@ -15,7 +16,8 @@ describe("Bill Component", () => {
   let store;
 
   beforeEach(() => {
-    store = createStore(combineReducers({bill: billReducer}));
+    // store = createStore(combineReducers({bill: billReducer}));
+    store = createStore(reducers);
   });
 
   it("shows the bill participants", () => {
