@@ -1,3 +1,5 @@
+import update from "react-addons-update";
+
 import {types as assignToActions} from "./assignToActions";
 import {types as billActions} from "../bill/billActions";
 
@@ -11,16 +13,10 @@ const initialState = {
 };
 const reducers = {};
 reducers[assignToActions.WANT_TO_ASSIGN] = (state, payload) => (
-  {
-    ...state,
-    queue: payload
-  }
+  update(state, {queue: {$set: payload}})
 );
 reducers[billActions.ADD_TO_BILL] = (state) => (
-  {
-    ...state,
-    queue: null
-  }
+  update(state, {queue: {$set: null}})
 );
 
 export default createReducer(reducers, initialState);

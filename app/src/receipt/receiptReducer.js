@@ -1,3 +1,5 @@
+import update from "react-addons-update";
+
 import {types as receiptActions} from "./receiptActions";
 import {types as billActions} from "../bill/billActions";
 
@@ -22,19 +24,12 @@ reducers[receiptActions.RECEIVE_OCR_RESPONSE] = (state, payload) => {
         }
       ));
 
-  return {
-    ...state,
-    moneyElements
-  }
+  return update(state, {$merge: {moneyElements}});
 };
 
 reducers[billActions.ADD_TO_BILL] = (state, payload) => (
-  {
-    ...state,
-    moneyElements: state.moneyElements.filter((element) => element.id !== payload.moneyElementId)
-  }
+  update(state, {moneyElements: {$apply: (moneyElements) => moneyElements.filter((element) => element.id !== payload.moneyElementId)}})
 );
 
-// TODO: Switch to using update(...) here.
 
 export default createReducer(reducers, initialState);
