@@ -1,5 +1,6 @@
-import {expect} from "chai";
+import chai, {expect} from "chai";
 import {mount} from "enzyme"
+import chaiEnzyme from "chai-enzyme";
 
 import React from "react";
 import {createStore, combineReducers} from "redux";
@@ -12,6 +13,8 @@ import reducers from "../../src/reducers";
 import BillContainer from "../../src/bill/BillContainer";
 
 describe("Bill Component", () => {
+  chai.use(chaiEnzyme());
+
   let store;
 
   beforeEach(() => {
@@ -24,9 +27,8 @@ describe("Bill Component", () => {
 
     const bill = mount(<BillContainer store={store} />);
 
-    expect(bill.text()).to
-      .contain("Steve - $5.50")
-      .contain("Amanda - $8.25");
+    expect(bill).to.contain.text("Steve -- $5.50");
+    expect(bill).to.contain.text("Steve -- $5.50");
   });
 
   it("sums multiple amounts to the same participant", () => {
@@ -35,6 +37,6 @@ describe("Bill Component", () => {
 
     const bill = mount(<BillContainer store={store} />);
 
-    expect(bill.text()).to.contain("Steve - $10.00")
+    expect(bill).to.contain.text("Steve -- $10.00");
   });
 });
