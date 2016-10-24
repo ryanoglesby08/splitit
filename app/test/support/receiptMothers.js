@@ -19,7 +19,11 @@ const defaultTextAnnotation = {
 
 export const anOcrResponse = (textAnnotations = [defaultTextAnnotation]) => (
   {
-    textAnnotations: textAnnotations.map((annotation) => anOcrTextAnnotation(annotation))
+    responses: [
+      {
+        textAnnotations: textAnnotations.map((annotation) => anOcrTextAnnotation(annotation))
+      }
+    ]
   }
 );
 

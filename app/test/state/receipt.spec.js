@@ -27,19 +27,17 @@ describe('Receipt state', () => {
 
     store.dispatch(receiveOcrResponse(ocrResponse));
 
-    expect(store.getState()).to.eql({
-      moneyElements: [
-        {
-          id: 1,
-          amount: '$1.00',
-          polygon: vertices1
-        },
-        {
-          id: 2,
-          amount: '$2.00',
-          polygon: vertices2
-        }
-      ]
-    });
+    expect(store.getState().moneyElements).to.deep.include.members([
+      {
+        id: 1,
+        amount: '$1.00',
+        polygon: vertices1
+      },
+      {
+        id: 2,
+        amount: '$2.00',
+        polygon: vertices2
+      }
+    ]);
   });
 });

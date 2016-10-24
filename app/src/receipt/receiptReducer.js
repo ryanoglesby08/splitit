@@ -8,13 +8,19 @@ import createReducer from "../createReducer";
 let nextId = 1;
 
 const initialState = {
-  moneyElements: []
+  moneyElements: [],
+  image: ""
 };
 
 const reducers = {};
+
+reducers[receiptActions.RECEIVE_RECEIPT] = (state, payload) => (
+  update(state, {image: {$set: payload}})
+);
+
 reducers[receiptActions.RECEIVE_OCR_RESPONSE] = (state, payload) => {
   const moneyElements =
-    payload.textAnnotations
+    payload.responses[0].textAnnotations
       .filter((annotation) => annotation.description.startsWith("$"))
       .map((annotation) => (
         {

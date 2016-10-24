@@ -41,9 +41,11 @@ class Receipt extends React.Component {
   }
 
   render() {
+    const receipt = this.props.receipt;
+
     return (
       <div>
-        <img className="receipt" src="images/receipt.jpg"/>
+        <img className="receipt" src={receipt.image} />
         <canvas className="receipt-elements" id="receiptCanvas" width={294} height={424} />
       </div>
     );
