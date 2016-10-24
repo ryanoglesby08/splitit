@@ -3,6 +3,7 @@
 import React from "react";
 import {Link} from "react-router";
 
+import readFileData from "./readFileData";
 import ocr from "../ocr";
 
 class ImportReceipt extends React.Component {
@@ -16,22 +17,18 @@ class ImportReceipt extends React.Component {
     const {receiveReceipt, receiveOcrResponse} = this.props;
 
     this.importReceipt.onchange = (event) => {
-      // Get a reference to the taken picture or chosen file
       const files = event.target.files;
-      let file;
 
       if (files && files.length > 0) {
-        file = files[0];
+        const file = files[0];
 
-        const reader = new FileReader();
-        reader.addEventListener("loadend", function () {
-          receiveReceipt(reader.result);
-
-          const base64ImageData = reader.result.substr(reader.result.indexOf(',') + 1);
-
-          ocr(base64ImageData).then(receiveOcrResponse);
-        });
-        reader.readAsDataURL(file);
+        readFileData(file, FileReader)
+          .then(({dataUrl, content}) => {
+            receiveReceipt(dataUrl);
+            return content;
+          })
+          .then(ocr)
+          .then(receiveOcrResponse);
       }
     };
   }
