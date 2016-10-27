@@ -4,7 +4,7 @@ import React from "react";
 import {Link} from "react-router";
 
 import readFileData from "./readFileData";
-import ocr from "../ocr";
+import ocr from "./ocr";
 
 class ImportReceipt extends React.Component {
   constructor(props) {

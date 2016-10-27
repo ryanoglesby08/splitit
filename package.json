@@ -2,7 +2,7 @@
   "name": "splitit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "webpack": "webpack --progress --colors -d",
     "webpack:watch": "npm run webpack -- --watch",
@@ -29,6 +29,7 @@
     "jsdom": "^9.5.0",
     "mocha": "^3.0.2",
     "mocha-webpack": "^0.6.0",
+    "nock": "^9.0.0",
     "node-sass": "^3.10.0",
     "sass-loader": "^4.0.2",
     "sinon": "^1.17.6",

@@ -1,3 +1,6 @@
 .tmp
 
 application.bundle.*
+
+# This file contains sensitive info, do not commit
+serve.sh

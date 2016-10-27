@@ -1,9 +1,8 @@
 import fetch from "isomorphic-fetch";
 
-// DO NOT COMMIT ME!!!
-const googleCloudApiKey = "-- NOT AVAILABLE --";
+import configProvider from "../configProvider";
 
-const googleCloudVisionImageAnnotatePath = `https://vision.googleapis.com/v1/images:annotate?key=${googleCloudApiKey}`;
+const googleCloudVisionImageAnnotatePath = (apiKey) => `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`;
 
 const ocr = (base64ImageByteString) => {
   const body = {
@@ -19,11 +18,15 @@ const ocr = (base64ImageByteString) => {
     ],
   };
 
-  return fetch(googleCloudVisionImageAnnotatePath, {
-    method: "post",
-    headers: {"content-type": "application/json"},
-    body: JSON.stringify(body)
-  }).then(jsonify);
+  return configProvider.value("GOOGLE_CLOUD_API_KEY")
+    .then((apiKey) =>
+      fetch(googleCloudVisionImageAnnotatePath(apiKey), {
+        method: "post",
+        headers: {"content-type": "application/json"},
+        body: JSON.stringify(body)
+      })
+    )
+    .then(jsonify);
 };
 
 const jsonify = (response) => {

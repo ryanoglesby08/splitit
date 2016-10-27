@@ -6,7 +6,6 @@ import {Router, Route, hashHistory} from "react-router";
 import {createStore} from "redux"
 import {Provider} from "react-redux";
 
-// import {receiveOcrResponse} from './receipt/receiptActions';
 import Reducers from './reducers';
 
 import ReceiptApp from "./ReceiptApp";
@@ -16,9 +15,6 @@ import ImportReceiptContainer from "./importreceipt/ImportReceiptContainer";
 require("../stylesheet/application.scss");
 
 const store = createStore(Reducers);
-
-// const ocrResponse = JSON.parse(window.cloudVisionResponse);
-// store.dispatch(receiveOcrResponse(ocrResponse));
 
 ReactDOM.render(
   <Provider store={store}>
