@@ -9,7 +9,7 @@ export const ConfigProvider = (remoteConfigProviderUrl, header) => {
         return Promise.resolve(config[key]);
       }
 
-      return fetch(remoteConfigProviderUrl)
+      return fetch(remoteConfigProviderUrl, {method: "HEAD"})
         .then((response) => {
           config = JSON.parse(response.headers.get(header));
           return config[key];
@@ -18,4 +18,4 @@ export const ConfigProvider = (remoteConfigProviderUrl, header) => {
   }
 };
 
-export default new ConfigProvider("/config", "JS_ENV");
+export default new ConfigProvider("/config", "JS-ENV");

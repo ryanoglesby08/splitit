@@ -1,31 +1,31 @@
 import {expect} from "chai";
 import nock from "nock";
 
-import {ConfigProvider} from '../src/configProvider';
+import {ConfigProvider} from '../../src/lib/configProvider';
 
 describe("Config Provider", () => {
   let configProvider;
 
   beforeEach(() => {
-    configProvider = ConfigProvider("http://test.host/config", "JS_ENV");
+    configProvider = ConfigProvider("http://test.host/config", "JS-ENV");
   });
 
   it("fetches configuration from a remote server", () => {
     nock("http://test.host")
-      .get("/config")
+      .head("/config")
       .reply(200, "", {
-        "JS_ENV": '{"SOME_KEY": "the-value"}'
+        "JS-ENV": '{"SOME_KEY": "the-value"}'
       });
 
     return configProvider.value("SOME_KEY")
       .then((value) => expect(value).to.eql("the-value"));
   });
 
-  it("does not fetch configuration if it has already done so", () => {
+  it("memoizes the config values after an initial remote fetch", () => {
     nock("http://test.host")
-      .get("/config")
+      .head("/config")
       .reply(200, "", {
-        "JS_ENV": '{"SOME_KEY": "the-value", "OTHER_KEY": "another value"}'
+        "JS-ENV": '{"SOME_KEY": "the-value", "OTHER_KEY": "another value"}'
       });
 
     return configProvider.value("SOME_KEY")

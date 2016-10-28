@@ -1,6 +1,6 @@
 import fetch from "isomorphic-fetch";
 
-import configProvider from "../configProvider";
+import configProvider from "../lib/configProvider";
 
 const googleCloudVisionImageAnnotatePath = (apiKey) => `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`;
 

@@ -1,9 +1,8 @@
 import update from "react-addons-update";
 
-import createReducer from "../createReducer";
+import createReducer from "../lib/createReducer";
 
 import {types as billActions} from "./billActions";
-
 
 export const getParticipantTotal = (bill, participantName) => bill[participantName];
 

@@ -3,7 +3,7 @@ import update from "react-addons-update";
 import {types as receiptActions} from "./receiptActions";
 import {types as billActions} from "../bill/billActions";
 
-import createReducer from "../createReducer";
+import createReducer from "../lib/createReducer";
 
 let nextId = 1;
 

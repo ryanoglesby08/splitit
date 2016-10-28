@@ -3,7 +3,7 @@ import update from "react-addons-update";
 import {types as assignToActions} from "./assignToActions";
 import {types as billActions} from "../bill/billActions";
 
-import createReducer from "../createReducer";
+import createReducer from "../lib/createReducer";
 
 export const assignToQueue = (state) => state.assignTo.queue;
 export const isQueueEmpty = (state) => assignToQueue(state) == null;
