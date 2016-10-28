@@ -1,13 +1,5 @@
 import fetch from "isomorphic-fetch";
 
-const parseConfig = (configHeader) => (
-  configHeader.split(",").reduce((config, property) => {
-    const [key, value] = property.split("=");
-
-    return {...config, [key]: value};
-  }, {})
-);
-
 export const ConfigProvider = (remoteConfigProviderUrl, header) => {
   let config = false;
 
@@ -19,7 +11,7 @@ export const ConfigProvider = (remoteConfigProviderUrl, header) => {
 
       return fetch(remoteConfigProviderUrl)
         .then((response) => {
-          config = parseConfig(response.headers.get(header));
+          config = JSON.parse(response.headers.get(header));
           return config[key];
         });
     }

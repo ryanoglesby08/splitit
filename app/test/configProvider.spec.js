@@ -14,7 +14,7 @@ describe("Config Provider", () => {
     nock("http://test.host")
       .get("/config")
       .reply(200, "", {
-        "JS_ENV": "SOME_KEY=the-value"
+        "JS_ENV": '{"SOME_KEY": "the-value"}'
       });
 
     return configProvider.value("SOME_KEY")
@@ -25,11 +25,11 @@ describe("Config Provider", () => {
     nock("http://test.host")
       .get("/config")
       .reply(200, "", {
-        "JS_ENV": "SOME_KEY=the-value,OTHER_KEY=another-value"
+        "JS_ENV": '{"SOME_KEY": "the-value", "OTHER_KEY": "another value"}'
       });
 
     return configProvider.value("SOME_KEY")
       .then(() => configProvider.value("OTHER_KEY"))
-      .then((otherValue) => expect(otherValue).to.eql("another-value"));
+      .then((otherValue) => expect(otherValue).to.eql("another value"));
   });
 });
