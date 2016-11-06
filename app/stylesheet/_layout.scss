@@ -1,0 +1,11 @@
+html, body {
+  @include fullscreen;
+}
+
+.fullscreen {
+  @include fullscreen;
+}
+
+.flex-centered {
+  margin: auto;
+}

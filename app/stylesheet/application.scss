@@ -6,12 +6,10 @@
 
 $spacing: 1rem;
 
-// z-indexes
-$receipt-z: 10;
-$receipt-elements-z: 11;
-$assign-to-z: 20;
-$done-link-z: 20;
+@import "mixins";
+@import "z-indexes";
 
+@import "layout";
 @import "components";
 
 .done-link {

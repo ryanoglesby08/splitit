@@ -35,8 +35,12 @@ class ImportReceipt extends React.Component {
 
   render() {
     return (
-      <div>
-        <input type="file" accept="image/*" capture="camera" ref={(input) => this.importReceipt = input}/>
+      <div className="fullscreen">
+        <label htmlFor="importReceipt" className="import-receipt-camera">
+          <i className="fa fa-camera fa-5x flex-centered" aria-hidden="true" />
+        </label>
+
+        <input id="importReceipt" type="file" accept="image/*" capture="camera" style={{display: "none"}} ref={(input) => this.importReceipt = input}/>
 
         <Link to="receipt">Go!</Link>
       </div>

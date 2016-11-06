@@ -20,7 +20,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/" component={ImportReceiptContainer} />
-      <Route path="/receipt" component={ReceiptApp} />
+      <Route path="receipt" component={ReceiptApp} />
       <Route path="bill" component={BillContainer} />
     </Router>
   </Provider>,
