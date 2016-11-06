@@ -2,7 +2,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import {Router, Route, hashHistory} from "react-router";
+import {Router, Route, browserHistory} from "react-router";
 import {createStore} from "redux"
 import {Provider} from "react-redux";
 
@@ -18,7 +18,7 @@ const store = createStore(Reducers);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
       <Route path="/" component={ImportReceiptContainer} />
       <Route path="receipt" component={ReceiptApp} />
       <Route path="bill" component={BillContainer} />

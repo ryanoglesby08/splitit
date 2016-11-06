@@ -1,7 +1,7 @@
 /* global FileReader */
 
 import React from "react";
-import {Link} from "react-router";
+import {browserHistory} from "react-router";
 
 import readFileData from "./readFileData";
 import ocr from "./ocr";
@@ -28,7 +28,8 @@ class ImportReceipt extends React.Component {
             return content;
           })
           .then(ocr)
-          .then(receiveOcrResponse);
+          .then(receiveOcrResponse)
+          .then(() => browserHistory.push("receipt"))
       }
     };
   }
@@ -41,8 +42,6 @@ class ImportReceipt extends React.Component {
         </label>
 
         <input id="importReceipt" type="file" accept="image/*" capture="camera" style={{display: "none"}} ref={(input) => this.importReceipt = input}/>
-
-        <Link to="receipt">Go!</Link>
       </div>
     );
   }
