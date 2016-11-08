@@ -3,6 +3,7 @@
   height: 100%;
 }
 
-@mixin flex-container {
+@mixin flex-container($type: row) {
   display: flex;
+  flex-direction: $type;
 }

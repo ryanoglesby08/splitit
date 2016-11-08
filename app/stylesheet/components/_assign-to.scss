@@ -1,15 +1,32 @@
 .assign-to {
-  display: inline-block;
-  position: relative;
+  @include flex-container(column);
 
-  z-index: $assign-to-z;
+  position: absolute;
+  top: 0;
+
+  width: 100%;
 
   .amount {
     padding: $spacing;
 
     background-color: blue;
     color: white;
-    border-radius: 15px
   }
+
+  .person {
+    padding: $spacing;
+    border: 2px solid gray;
+  }
+
+  .ok {
+    padding: $spacing;
+    margin-top: $spacing;
+
+    border: 0;
+
+    background-color: darkblue;
+    color: white;
+  }
+
 }
 

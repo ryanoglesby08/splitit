@@ -43,11 +43,12 @@ class Receipt extends React.Component {
   render() {
     const receipt = this.props.receipt;
 
+    const styles = {
+      backgroundImage: `url(${receipt.image})`
+    };
+
     return (
-      <div>
-        <img className="receipt" src={receipt.image} />
-        <canvas className="receipt-elements" id="receiptCanvas" width={294} height={424} />
-      </div>
+      <canvas id="receiptCanvas" width={294} height={424} style={styles} />
     );
   }
 }

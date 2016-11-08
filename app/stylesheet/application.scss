@@ -6,6 +6,11 @@
 
 $spacing: 1rem;
 
+html {
+  font-size: 16px;
+  line-height: 20px;
+}
+
 @import "mixins";
 @import "z-indexes";
 
