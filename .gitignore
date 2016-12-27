@@ -1,6 +1,10 @@
 .tmp
+.idea
 
 application.bundle.*
 
 # This file contains sensitive info, do not commit
 serve.sh
+
+# This image is just for testing, do not commit
+receipt.jpg
