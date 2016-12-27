@@ -1,0 +1,10 @@
+@mixin body-font {
+  color: #212121;
+  font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.02em;
+
+  font-size: 16px;
+  line-height: 20px;
+}

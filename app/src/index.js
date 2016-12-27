@@ -8,7 +8,7 @@ import {Provider} from "react-redux";
 
 import Reducers from './reducers';
 
-import ReceiptApp from "./ReceiptApp";
+import ReceiptApp from "./receipt/ReceiptApp";
 import BillContainer from "./bill/BillContainer";
 import ImportReceiptContainer from "./importreceipt/ImportReceiptContainer";
 

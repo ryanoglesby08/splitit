@@ -17,12 +17,12 @@ class AssignTo extends React.Component {
     const {moneyElementId, amount, addToBill} = this.props;
 
     return (
-      <section className="assign-to">
-        <div className="amount">Add {amount} to...</div>
+      <div className="assign-to">
+        <header>Add {amount} to...</header>
 
         <input type="text" ref="person" className="person"/>
         <input type="submit" value="OK" className="ok" onClick={() => addToBill(this.refs.person.value, moneyElementId, amount) }/>
-      </section>
+      </div>
     );
   }
 }

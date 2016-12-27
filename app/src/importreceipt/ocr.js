@@ -7,7 +7,6 @@ const ocr = (base64ImageByteString) => {
   return configProvider.value("USE_OCR_STUB")
     .then((useCloudVisionStub) => {
       if( useCloudVisionStub ) {
-        console.log(stubCloudVisionResponse);
         return Promise.resolve(stubCloudVisionResponse);
       }
 

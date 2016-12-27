@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  @include body-font;
+  @include fullscreen;
+}
