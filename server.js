@@ -1,9 +1,9 @@
 const express = require('express');
 const path = require('path');
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8080;
 const app = express();
 
-// Expected format: JS_ENV="A_KEY=the-value,ANOTHER_KEY=12345678"
+// Expected format is JSON
 const jsEnv = process.env.JS_ENV;
 
 // serve static assets normally

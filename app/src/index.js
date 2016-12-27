@@ -12,7 +12,7 @@ import ReceiptApp from "./ReceiptApp";
 import BillContainer from "./bill/BillContainer";
 import ImportReceiptContainer from "./importreceipt/ImportReceiptContainer";
 
-require("../stylesheet/application.scss");
+import "../stylesheet/application.scss";
 
 const store = createStore(Reducers);
 

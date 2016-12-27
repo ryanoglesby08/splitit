@@ -1,40 +1,18 @@
-import fetch from "isomorphic-fetch";
-
 import configProvider from "../lib/configProvider";
+import googleCloudVisionApiClient from "../lib/googleCloudVisionApiClient";
 
-const googleCloudVisionImageAnnotatePath = (apiKey) => `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`;
+import stubCloudVisionResponse from "./cloud_vision_response";
 
 const ocr = (base64ImageByteString) => {
-  const body = {
-    requests: [
-      {
-        image: {
-          content: base64ImageByteString,
-        },
-        features: [
-          {type: "TEXT_DETECTION"}
-        ]
+  return configProvider.value("USE_OCR_STUB")
+    .then((useCloudVisionStub) => {
+      if( useCloudVisionStub ) {
+        console.log(stubCloudVisionResponse);
+        return Promise.resolve(stubCloudVisionResponse);
       }
-    ],
-  };
 
-  return configProvider.value("GOOGLE_CLOUD_API_KEY")
-    .then((apiKey) =>
-      fetch(googleCloudVisionImageAnnotatePath(apiKey), {
-        method: "post",
-        headers: {"content-type": "application/json"},
-        body: JSON.stringify(body)
-      })
-    )
-    .then(jsonify);
-};
-
-const jsonify = (response) => {
-  if (!response.ok) {
-    return response.json().then((errorBody) => { throw errorBody; });
-  }
-
-  return response.json();
+      return googleCloudVisionApiClient.imageAnnotate(base64ImageByteString);
+    });
 };
 
 export default ocr;

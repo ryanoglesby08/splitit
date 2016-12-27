@@ -27,6 +27,7 @@
     "eslint-plugin-react": "^6.3.0",
     "file-api": "^0.10.4",
     "jsdom": "^9.5.0",
+    "json-loader": "^0.5.4",
     "mocha": "^3.0.2",
     "mocha-webpack": "^0.6.0",
     "nock": "^9.0.0",

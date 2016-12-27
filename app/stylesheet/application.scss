@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 
-$spacing: 1rem;
-
 html {
   font-size: 16px;
   line-height: 20px;
 }
+
+$spacing: 1rem;
 
 @import "mixins";
 @import "z-indexes";
