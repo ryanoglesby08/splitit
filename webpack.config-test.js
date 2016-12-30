@@ -1,4 +1,5 @@
 var nodeExternals = require('webpack-node-externals');
+var path = require("path");
 
 module.exports = {
   module: {
@@ -15,3 +16,5 @@ module.exports = {
 require('source-map-support').install({
   environment: 'node'
 });
+
+require("./app/test/support/jsdom");

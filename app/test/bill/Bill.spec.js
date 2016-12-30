@@ -5,8 +5,6 @@ import chaiEnzyme from "chai-enzyme";
 import React from "react";
 import {createStore, combineReducers} from "redux";
 
-import "../support/jsdom";
-
 import {addToBill} from "../../src/bill/billActions";
 import reducers from "../../src/reducers";
 

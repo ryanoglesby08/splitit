@@ -13,6 +13,26 @@ MaybeAssignTo.propTypes = {
 
 
 class AssignTo extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.newNameInput = null;
+    this.state = {
+      newName: ""
+    };
+    this.setNewName = this.setNewName.bind(this);
+  }
+
+  componentDidMount() {
+    this.newNameInput.focus();
+  }
+
+  setNewName(event) {
+    this.setState({
+      newName: event.target.value
+    });
+  }
+
   render() {
     const {moneyElementId, amount, addToBill} = this.props;
 
@@ -20,8 +40,8 @@ class AssignTo extends React.Component {
       <div className="assign-to">
         <header>Add {amount} to...</header>
 
-        <input type="text" ref="person" className="person"/>
-        <input type="submit" value="OK" className="ok" onClick={() => addToBill(this.refs.person.value, moneyElementId, amount) }/>
+        <input type="text" value={this.state.newName} className="new-name" ref={(newNameInput) => this.newNameInput = newNameInput} onChange={this.setNewName}/>
+        <input type="submit" value="OK" className="ok" onClick={() => addToBill(this.state.newName, moneyElementId, amount)}/>
       </div>
     );
   }

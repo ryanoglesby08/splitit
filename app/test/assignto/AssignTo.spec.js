@@ -5,7 +5,6 @@ import chaiEnzyme from "chai-enzyme";
 import React from "react";
 import {createStore} from 'redux';
 
-import "../support/jsdom";
 import {aMoneyElement} from "../support/receiptMothers"
 
 import {wantToAssign} from "../../src/assignto/assignToActions";
@@ -18,6 +17,13 @@ describe("Assign To Component", () => {
 
   let store;
 
+  const storeWithAmountToAssign = (store, amount = "$5.00") => {
+    const moneyElement = aMoneyElement({amount});
+    store.dispatch(wantToAssign(moneyElement));
+
+    return store;
+  };
+
   beforeEach(() => {
     store = createStore(reducers);
   });
@@ -29,30 +35,27 @@ describe("Assign To Component", () => {
   });
 
   it("Shows itself when there is something to assign", () => {
-    const moneyElement = aMoneyElement({amount: "$2.25"});
-    store.dispatch(wantToAssign(moneyElement));
-
+    store = storeWithAmountToAssign(store, "$2.25");
     const assignTo = mount(<AssignToContainer store={store} />);
 
     expect(assignTo).to.contain.text("$2.25");
   });
 
-  it.skip("Assigns an amount to someone", () => {
-    const moneyElement = aMoneyElement({amount: "$5.50"});
-    store.dispatch(wantToAssign(moneyElement));
-
+  it("automatically focuses on the new name input field", () => {
+    store = storeWithAmountToAssign(store);
     const assignTo = mount(<AssignToContainer store={store} />);
 
-    assignTo.find("input[type='text']").simulate("change", "Steve");
-    // console.log(assignTo.find("input[type='text']").html());
+    expect(assignTo.find("input[type='text']").node).to.eql(document.activeElement);
+  })
+
+  it("Assigns an amount to someone", () => {
+    store = storeWithAmountToAssign(store, "$5.50");
+    const assignTo = mount(<AssignToContainer store={store} />);
+
+    assignTo.find("input[type='text']").simulate("change", {target: {value: "Steve"}});
     assignTo.find("input[type='submit']").simulate("click");
 
-
-    //TODO: assigns to someone, marks that element as done in the receipt, and hides the assign to
     expect(assignTo.html()).eql(null);
-    // TODO: Fix this test, and maybe it is two tests?
-    expect(store.getState()['bill']).to.eql({
-      "Steve": ["$5.50"]
-    });
+    expect(store.getState().bill).to.eql({"Steve": 5.5});
   });
 });
