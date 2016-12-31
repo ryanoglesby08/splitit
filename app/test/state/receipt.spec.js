@@ -27,14 +27,13 @@ describe('Receipt state', () => {
 
     store.dispatch(receiveOcrResponse(ocrResponse));
 
-    expect(store.getState().moneyElements).to.deep.include.members([
+    const elementsWithNoIds = store.getState().moneyElements.map(({id, ...rest}) => rest);
+    expect(elementsWithNoIds).to.deep.include.members([
       {
-        id: 1,
         amount: '$1.00',
         polygon: vertices1
       },
       {
-        id: 2,
         amount: '$2.00',
         polygon: vertices2
       }
